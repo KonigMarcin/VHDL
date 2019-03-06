@@ -1,0 +1,3 @@
+1) Prze³¹cznikami SW3, SW2, SW1, SW0 ustawiamy 4-bitow¹ wartoœæ.
+2) Naciœniêcie przycisku BTN3 spowoduje zapalenie na cyfrze AN3 wyœwietlacza aktualnie ustawionej wartoœci na prze³¹cznikach SW3-SW0. Wartoœæ nale¿y wyœwietliæ w postaci szesnastkowej. Takie samo dzia³anie nale¿y przypisaæ do pozosta³ych przycisków, tj. odpowiednio: naciœniêcie BTN2 powoduje zapalenie cyfry AN2, BTN1->AN1 oraz BTN0->AN0. Po naciœniêciu przycisku, znak na wyœwietlaczu powinien siê paliæ trwale, a¿ do wpisania nowej wartoœci.
+3) Za³¹czenie prze³¹cznika SW7 powinno spowodowaæ zapalenie kropki dziesiêtnej DP wyœwietlacza AN3. Wy³¹czenie prze³¹cznika powinno spowodowaæ zgaszenie kropki DP tego wyœwietlacza. Identyczne dzia³anie dotyczy tak¿e SW6 -> DP AN2, SW5 -> DP AN1, SW4 -> DP AN0.
