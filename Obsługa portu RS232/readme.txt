@@ -1,0 +1,2 @@
+Modu³y nadajnika i odbiornika danych w standardzie RS-232 dla nastêpuj¹cych parametrów transmisji: 8 bitów danych, bez bitu parzystoœci, jeden bit stopu, szybkoœæ transmisji 9600bps bez sprzêtowej kontroli przep³ywu. 
+Modu³y  po³¹czyone s¹ tak ¿eby odbiornik RS232 po otrzymaniu danych podawa³ je do sumatora i po dodaniu do nich wartoœci 20h, modu³ nadajnika wysy³a³ je - zamiana wielkich liter na ma³e 
