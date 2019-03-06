@@ -1,0 +1,1 @@
+Uk³ad  odczytuje  klawiaturê PS/2 i wyœwietla na wyœwietlaczu LED naciœniête klawisze. Poniewa¿ dostêpny jest tylko wyœwietlacz 7-segmentowy, rozpoznawane s¹ tylko nastêpuj¹ce klawisze: 1,2,3,4,5,6,7,8,9,0,a,b,c,d,e,f. W przypadku wciœniêcia innego klawisza, wyœwietlacz nale¿y wygasiæ
