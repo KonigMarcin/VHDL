@@ -1,6 +1,6 @@
-Uk≥ad zegara czasu rzeczywistego wyúwietlaja czas w postaci : HH.MM. Kropka miga z czÍstotliwoúciπ 1 Hz.
+Uk≈Çad zegara czasu rzeczywistego wy≈õwietlajacy czas w postaci : HH.MM. Kropka miga z czƒôstotliwo≈õciƒÖ 1 Hz.
 
 Przycisk BTN1 - ustawianie godzin.
 Przycisk BTN0 - ustawianie minut.
-Przycisk BTN2 - przycisk testowy, powodujπcy przyspieszone (np. 1000 razy) dzia≥anie zegara w celu sprawdzenia dzia≥ania zegara na laboratorium.
+Przycisk BTN2 - przycisk testowy, powodujƒÖcy przyspieszone (np. 1000 razy) dzia≈Çanie zegara w celu sprawdzenia dzia≈Çania zegara na laboratorium.
 Przycisk B(rst_i) TN3 - reset asynchroniczny.
