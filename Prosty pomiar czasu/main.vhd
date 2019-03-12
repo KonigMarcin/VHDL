@@ -48,6 +48,17 @@ signal ones: Integer range 0 to 9:=0; -- pojedyncze sekundy
 signal tenths: Integer range 0 to 9:=0;-- czesc dziesietna sekundy
 signal hundreds: Integer range 0 to 9:=0;-- czesc setna sekundy
 signal stan: Integer range 0 to 4:=0;--informuje ile razy zostal zalaczony przycisk, gdzie 1 raz -start, 2 stop 3 reset
+constant zero :std_logic_vector(7 downto 1):="0000001";
+constant jeden :std_logic_vector(7 downto 1):="1001111";
+constant dwa :std_logic_vector(7 downto 1):="0010010";
+constant trzy :std_logic_vector(7 downto 1):="0000110";
+constant cztery :std_logic_vector(7 downto 1):="1001100";
+constant piec :std_logic_vector(7 downto 1):="0100100";
+constant szesc :std_logic_vector(7 downto 1):="0100000";
+constant siedem :std_logic_vector(7 downto 1):="0001111";
+constant osiem :std_logic_vector(7 downto 1):="0000000";
+constant dziewiec :std_logic_vector(7 downto 1):="0000100";
+constant kreska :std_logic_vector(7 downto 1):="0111111"; 
 Component dzielnik --dzielnik czestotliwosci
  Port ( reset : in std_logic;
 		 clock: in std_logic;
@@ -142,49 +153,49 @@ end if;
 end if;
 
 
-if tens=0 then digit_i(31 downto 25)<="1000000";
-elsif  tens=1 then digit_i(31 downto 25)<="1111001";
-elsif tens=2 then digit_i(31 downto 25)<="0100100";
-elsif tens=3 then digit_i(31 downto 25)<="0110000";
-elsif tens=4 then digit_i(31 downto 25)<="0011001";
-elsif tens=5 then digit_i(31 downto 25)<="0010010";
+if tens=0 then digit_i(31 downto 25)<=zero;
+elsif  tens=1 then digit_i(31 downto 25)<=jeden;
+elsif tens=2 then digit_i(31 downto 25)<=dwa;
+elsif tens=3 then digit_i(31 downto 25)<=trzy;
+elsif tens=4 then digit_i(31 downto 25)<=cztery;
+elsif tens=5 then digit_i(31 downto 25)<=piec;
 end if;
 
 
-if ones=0 then digit_i(23 downto 17)<="1000000"; --0
-elsif ones=1  then digit_i(23 downto 17)<="1111001";--1
-elsif ones=2  then digit_i(23 downto 17)<="0100100";--2
-elsif ones=3  then digit_i(23 downto 17)<="0110000";--3
-elsif ones=4  then digit_i(23 downto 17)<="0011001";--4
-elsif ones=5  then digit_i(23 downto 17)<="0010010";--5
-elsif ones=6  then digit_i(23 downto 17)<="0000010";--6
-elsif ones=7 then digit_i(23 downto 17)<="1111000";--7
-elsif ones=8 then digit_i(23 downto 17)<="0000000";--8
-elsif ones=9 then digit_i(23 downto 17)<="0010000";--9 
+if ones=0 then digit_i(23 downto 17)<=zero; --0
+elsif ones=1  then digit_i(23 downto 17)<=jeden;--1
+elsif ones=2  then digit_i(23 downto 17)<=dwa;--2
+elsif ones=3  then digit_i(23 downto 17)<=trzy;--3
+elsif ones=4  then digit_i(23 downto 17)<=cztery;--4
+elsif ones=5  then digit_i(23 downto 17)<=piec;--5
+elsif ones=6  then digit_i(23 downto 17)<=szesc;--6
+elsif ones=7 then digit_i(23 downto 17)<=siedem;--7
+elsif ones=8 then digit_i(23 downto 17)<=osiem;--8
+elsif ones=9 then digit_i(23 downto 17)<=dziewiec;--9 
 end if;
 
-if tenths=0 then digit_i(15 downto 9)<="1000000";
-elsif tenths=1 then digit_i(15 downto 9)<="1111001";
-elsif tenths=2 then digit_i(15 downto 9)<="0100100";
-elsif tenths=3  then digit_i(15 downto 9)<="0110000";
-elsif tenths=4  then digit_i(15 downto 9)<="0011001";
-elsif tenths=5  then digit_i(15 downto 9)<="0010010";
-elsif tenths=6  then digit_i(15 downto 9)<="0000010";
-elsif tenths=7  then digit_i(15 downto 9)<="1111000";
-elsif tenths=8 then digit_i(15 downto 9)<="0000000";
-elsif tenths=9 then digit_i(15 downto 9)<="0010000";
+if tenths=0 then digit_i(15 downto 9)<=zero;
+elsif tenths=1 then digit_i(15 downto 9)<=jeden;
+elsif tenths=2 then digit_i(15 downto 9)<=dwa;
+elsif tenths=3  then digit_i(15 downto 9)<=trzy;
+elsif tenths=4  then digit_i(15 downto 9)<=cztery;
+elsif tenths=5  then digit_i(15 downto 9)<=piec;
+elsif tenths=6  then digit_i(15 downto 9)<=szesc;
+elsif tenths=7  then digit_i(15 downto 9)<=siedem;
+elsif tenths=8 then digit_i(15 downto 9)<=osiem;
+elsif tenths=9 then digit_i(15 downto 9)<=dziewiec;
 end if;
 
-if hundreds=0 then digit_i(7 downto 1)<="1000000";
-elsif hundreds=1 then digit_i(7 downto 1)<="1111001";
-elsif hundreds=2 then digit_i(7 downto 1)<="0100100";
-elsif hundreds=3 then digit_i(7 downto 1)<="0110000";
-elsif hundreds=4 then digit_i(7 downto 1)<="0011001";
-elsif hundreds=5 then digit_i(7 downto 1)<="0010010";
-elsif hundreds=6 then digit_i(7 downto 1)<="0000010";
-elsif hundreds=7 then digit_i(7 downto 1)<="1111000";
-elsif hundreds=8 then digit_i(7 downto 1)<="0000000";
-elsif hundreds=9 then digit_i(7 downto 1)<="0010000";
+if hundreds=0 then digit_i(7 downto 1)<=zero;
+elsif hundreds=1 then digit_i(7 downto 1)<=jeden;
+elsif hundreds=2 then digit_i(7 downto 1)<=dwa;
+elsif hundreds=3 then digit_i(7 downto 1)<=trzy;
+elsif hundreds=4 then digit_i(7 downto 1)<=cztery;
+elsif hundreds=5 then digit_i(7 downto 1)<=piec;
+elsif hundreds=6 then digit_i(7 downto 1)<=szesc;
+elsif hundreds=7 then digit_i(7 downto 1)<=siedem;
+elsif hundreds=8 then digit_i(7 downto 1)<=osiem;
+elsif hundreds=9 then digit_i(7 downto 1)<=dziewiec;
 
 end if;
 
@@ -193,10 +204,10 @@ digit_i(8)<='1';
 digit_i(16)<='0';--wyswietlenie kropki pomiedzy czescia jednosci sekundy, a czesciami dziesietnymi
 digit_i(24)<='1';
 if stan=3 then  -- reset poprzez przycisk start/stop/reset
-digit_i(7 downto 1)<="0111111"; 
-digit_i(15 downto 9)<="0111111"; 
-digit_i(23 downto 17)<="0111111"; 
-digit_i(31 downto 25)<="0111111"; 
+digit_i(7 downto 1)<=kreska; 
+digit_i(15 downto 9)<=kreska; 
+digit_i(23 downto 17)<=kreska; 
+digit_i(31 downto 25)<=kreska; 
 end if;
 end process;
 end Behavioral;

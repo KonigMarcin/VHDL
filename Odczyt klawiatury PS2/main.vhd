@@ -44,6 +44,22 @@ signal digit_i : STD_LOGIC_VECTOR(31 downto 0) :=(others => '1');  --pomocniczy 
 signal stan: Integer range 0 to 4:=0;
 signal data: STD_LOGIC_VECTOR (7 downto 0);--pomoniczy wektor przechowujacy dane otrzymane z lini danych klawiatury
 signal counter: integer range 0 to 7:=0;
+constant zero :std_logic_vector(7 downto 1):="0000001";
+constant jeden :std_logic_vector(7 downto 1):="1001111";
+constant dwa :std_logic_vector(7 downto 1):="0010010";
+constant trzy :std_logic_vector(7 downto 1):="0000110";
+constant cztery :std_logic_vector(7 downto 1):="1001100";
+constant piec :std_logic_vector(7 downto 1):="0100100";
+constant szesc :std_logic_vector(7 downto 1):="0100000";
+constant siedem :std_logic_vector(7 downto 1):="0001111";
+constant osiem :std_logic_vector(7 downto 1):="0000000";
+constant dziewiec :std_logic_vector(7 downto 1):="0000100";
+constant AAA :std_logic_vector(7 downto 1):="0001000";
+constant BBB :std_logic_vector(7 downto 1):="1100000";
+constant CCC :std_logic_vector(7 downto 1):="0110001";
+constant DDD :std_logic_vector(7 downto 1):="1000010";
+constant EEE :std_logic_vector(7 downto 1):="0110000";
+constant FFF :std_logic_vector(7 downto 1):="0111000";
 Component dzielnik
  Port ( reset : in std_logic;
 		 clock: in std_logic;
@@ -106,22 +122,22 @@ elsif rising_edge(clock_key) then
 		end if;
 	elsif stan=2 then --wyswietalnie danych na jednym wyswietlaczu
 		
-		if data="01000101" then digit_i(7 downto 1)<="1000000";  --0
-		elsif data="00010110" then digit_i(7 downto 1)<="1111001"; --1
-		elsif data="00011110" then digit_i(7 downto 1)<="0100100"; --2
-		elsif data="00100110" then digit_i(7 downto 1)<="0110000"; --3
-		elsif data="00100101" then digit_i(7 downto 1)<="0011001"; --4
-		elsif data="00101110" then digit_i(7 downto 1)<="0010010"; --5
-		elsif data="00110110" then digit_i(7 downto 1)<="0000010"; --6
-		elsif data="00111101" then digit_i(7 downto 1)<="1111000";--7
-		elsif data="00111110" then digit_i(7 downto 1)<="0000000";--8
-		elsif data="01000110" then digit_i(7 downto 1)<="0010000";--9
-		elsif data="00011100" then digit_i(7 downto 1)<="0001000";--a
-		elsif data="00110010" then digit_i(7 downto 1)<="0000011";--b
-		elsif data="00100001" then digit_i(7 downto 1)<="0100111";--c
-		elsif data="00100011" then digit_i(7 downto 1)<="0100001";--d
-		elsif data="00100100" then digit_i(7 downto 1)<="0000110";--e
-		elsif data="00101011" then digit_i(7 downto 1)<="0001110";	--f
+		if data="01000101" then digit_i(7 downto 1)<=zero;  --0
+		elsif data="00010110" then digit_i(7 downto 1)<=jeden; --1
+		elsif data="00011110" then digit_i(7 downto 1)<=dwa; --2
+		elsif data="00100110" then digit_i(7 downto 1)<=trzy; --3
+		elsif data="00100101" then digit_i(7 downto 1)<=cztery; --4
+		elsif data="00101110" then digit_i(7 downto 1)<=piec; --5
+		elsif data="00110110" then digit_i(7 downto 1)<=szesc; --6
+		elsif data="00111101" then digit_i(7 downto 1)<=siedem;--7
+		elsif data="00111110" then digit_i(7 downto 1)<=osiem;--8
+		elsif data="01000110" then digit_i(7 downto 1)<=dziewiec;--9
+		elsif data="00011100" then digit_i(7 downto 1)<=AAA;--a
+		elsif data="00110010" then digit_i(7 downto 1)<=BBB;--b
+		elsif data="00100001" then digit_i(7 downto 1)<=CCC;--c
+		elsif data="00100011" then digit_i(7 downto 1)<=DDD;--d
+		elsif data="00100100" then digit_i(7 downto 1)<=EEE;--e
+		elsif data="00101011" then digit_i(7 downto 1)<=FFF;	--f
 		else digit_i<=(others => '1');
 			
 		end if;
